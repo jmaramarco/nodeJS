@@ -368,9 +368,9 @@ p{
 }
 
 @media(max-width:991px) {
-  body {
+  /* body {
       padding: 30px;
-  }
+  } */
 
   .form-register {
       padding: 50px 30px;
