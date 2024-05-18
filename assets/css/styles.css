@@ -28,9 +28,9 @@ header{
     position:relative;
 }
 
-/*   Crea un contenedor flexible: 
-  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible 
-  que organiza a sus elementos hijos de manera flexible 
+/*   Crea un contenedor flexible:
+  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible
+  que organiza a sus elementos hijos de manera flexible
   en una sola línea o en varias líneas según sea necesario. */
 
   nav{
@@ -67,7 +67,7 @@ header{
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
-  
+
   .menu-btn {
     display: block; /* Muestra el botón de menú en pantallas pequeñas */
   }
@@ -95,6 +95,7 @@ header{
   nav ul li a {
     color:var(--bg-color); /* Asegura que las letras del menú desplegable sean negras */
   }
+  
 }
 
 /* Crea un contenedor flexible */
@@ -115,13 +116,13 @@ nav ul li {
   display: inline-block;
 }
 
-/* Pseudoclases es un selector que marca los elementos que están en un estado 
+/* Pseudoclases es un selector que marca los elementos que están en un estado
   específico first-child: significa primer hijo */
   nav ul li:first-child {
     margin-left: 0;
   }
 
-  
+
   nav ul li:last-child {
     margin-right: 2vw;
   }
@@ -136,10 +137,10 @@ nav ul li {
 
  /*Otra pseudoclase en el estado "sobrevolando"*/
   /* Cambio de color al pasar el mouse sobre los enlaces */
-  /* :hover permite aplicar estilos especiales a un elemento 
-  cuando se encuentra en un estado específico, como cuando el cursor 
-  se coloca sobre él  */  
- 
+  /* :hover permite aplicar estilos especiales a un elemento
+  cuando se encuentra en un estado específico, como cuando el cursor
+  se coloca sobre él  */
+
   /*el hover en este caso es un desencadenante*/
   nav ul li a:hover{
     background-color: var(--bg-input-color);
@@ -167,7 +168,7 @@ nav ul li {
     background-color: var(--bg-input-color);
 }
 
-/* Animación para enfatizar el cambio de color 
+/* Animación para enfatizar el cambio de color
   lo definimos con @keyframe luego le damos un nombre "pulse"*/
 
   @keyframes pulse{
@@ -208,8 +209,8 @@ nav ul li {
 
 .redes{
     color: var(--bg-input-color);
-    margin: 0px 6px;
-    font-size: 4vh;
+    margin: 0px 10px;
+    font-size: 30px;
     text-align: center;
 
 }
@@ -223,8 +224,6 @@ body {
    }
 
 
-
-
 h4{
     color:white;
     font-family: 'caveat';
@@ -233,10 +232,10 @@ h4{
 }
 
 h2{
-    
+
   color:black;
   font-family:'Oswald';
-  padding: 12px; 
+  padding: 12px;
   text-align:center;
 }
 
@@ -251,7 +250,7 @@ h3{
 p{
   color: black;
   font-family: 'Open Sans';
-  font-size: 15px; 
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -266,8 +265,8 @@ p{
   margin-top: 50px;
   border-radius: 4px;
   font-family: Calibri;
-  color: white;   
-  box-shadow: 7px 13px 37px #000; 
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 
 }
 
@@ -278,7 +277,7 @@ p{
   border-radius: 4px;
   margin-bottom: 1px;
   border: 2px solid #0909fdfa;
-  
+
 }
 
 .form-register .text1 {
@@ -286,7 +285,7 @@ p{
   text-align: justify;
   font-size: 14px;
   font-family: Calibri;
-  
+
 }
 
 .form-register a {
@@ -298,7 +297,7 @@ p{
 .form-register .formu {
   margin: auto;
   font-family: Calibri;
-  color: white;   
+  color: white;
 }
 
 .form-register .botons {
@@ -324,7 +323,7 @@ p{
       hwb(0 2% 7% / 0.98) 77%);
   color: var(--bg-color);
 
-  
+
 }
 
 .form-register .botons1 {
@@ -340,7 +339,7 @@ p{
   font-weight: bold;
   margin: 10px 0;
   font-size: 13px;
- 
+
 }
 
 .form-register .botons1:hover {
@@ -349,7 +348,7 @@ p{
       rgb(5, 0, 0) 0%,
       hwb(0 2% 7% / 0.98) 77%);
   color: var(--bg-color);
-  
+
 }
 
 .form-register .comen {
@@ -368,21 +367,19 @@ p{
 }
 
 @media(max-width:991px) {
-  /* body {
-      padding: 30px;
-  } */
+  body {
+      padding: 20px;
+  }
 
   .form-register {
-      padding: 50px 30px;
-      width: 100%;
+      padding: 50px ;
+      width: 80%;
   }
-
+  
   input {
       padding: 15px 10px;
-  }
-
-
-}
+  } 
+} 
 
 nav {
   animation-duration: 1.5s;
