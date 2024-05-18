@@ -1,0 +1,402 @@
+/* Estilos generales */
+/* Configuracion de variables */
+
+:root{
+    /*colores institucionales*/
+    --primary-color: #9f3647;
+    --secondary-color:#fdede3;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    /*colores de fondo*/
+    --bg-color:#181419;
+    --bg-input-color:#d9d3db2c;
+    /*fuente primaria*/
+    --primary-font: Arial, sans-serif, helvetica;
+}
+
+/*estilos generales*/
+body, html{
+    font-family: var(--primary-font);
+    margin:0;
+    padding: 0;
+    height: 100vh;
+}
+
+header{
+    background-color: var(--bg-color);
+    padding: 2vh 0;
+    position:relative;
+}
+
+/*   Crea un contenedor flexible: 
+  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible 
+  que organiza a sus elementos hijos de manera flexible 
+  en una sola línea o en varias líneas según sea necesario. */
+
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--bg-color);
+  }
+
+  nav ul{
+    list-style-type: none;/*quita el estilo de lista es decir las viñetas*/
+    padding: 0;
+    margin: 0;
+    text-align: flex;
+  }
+
+  nav ul li{
+    margin-right: 20px;
+  }
+
+  .menu-btn {
+    display: none;
+    font-size: 30px;
+    background-color: var(--bg-color); /* Fondo negro */
+    color: white; /* Letras blancas */
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Añade un poco de relleno */
+  }
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  
+  .menu-btn {
+    display: block; /* Muestra el botón de menú en pantallas pequeñas */
+  }
+
+  nav ul {
+    display: none; /* Oculta la lista en pantallas pequeñas */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de tu encabezado */
+    right: 0;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  nav ul.open {
+    display: flex; /* Muestra la lista cuando está abierta */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: right; /* Alinea los elementos de la lista a la derecha */
+    padding-right: 10px; /* Añade un poco de relleno a la derecha */
+  }
+
+  nav ul li a {
+    color:var(--bg-color); /* Asegura que las letras del menú desplegable sean negras */
+  }
+}
+
+/* Crea un contenedor flexible */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none; /* Quita el estilo de lista es decir las viñetas */
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+/* Pseudoclases es un selector que marca los elementos que están en un estado 
+  específico first-child: significa primer hijo */
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+
+  
+  nav ul li:last-child {
+    margin-right: 2vw;
+  }
+
+  nav ul li a, nav>a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: background-color 0.3s;
+  }
+
+ /*Otra pseudoclase en el estado "sobrevolando"*/
+  /* Cambio de color al pasar el mouse sobre los enlaces */
+  /* :hover permite aplicar estilos especiales a un elemento 
+  cuando se encuentra en un estado específico, como cuando el cursor 
+  se coloca sobre él  */  
+ 
+  /*el hover en este caso es un desencadenante*/
+  nav ul li a:hover{
+    background-color: var(--bg-input-color);
+  }
+
+/*animación del botón*/
+.container{
+    display: flex;
+    justify-content: center; /*alineacion horizontal*/
+    align-items: center; /*alineacion vertical*/
+    height: 100vh;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--bg-input-color);
+}
+
+/* Animación para enfatizar el cambio de color 
+  lo definimos con @keyframe luego le damos un nombre "pulse"*/
+
+  @keyframes pulse{
+    0%{
+        transform:scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+  }
+
+  .btn:hover{
+    animation: pulse 0.5s infinite alternate;
+  }
+
+
+  nav div{
+    list-style-type: none;/*quita el estilo de lista es decir las viñetas*/
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    display: inline-block;
+  }
+
+
+  /*Estilos del Footer:*/
+  footer>div {
+    border: 2px red solid;
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    clear: left;
+    background-color: var(--bg-color);
+    text-align: center;
+
+}
+
+.redes{
+    color: var(--bg-input-color);
+    margin: 0px 6px;
+    font-size: 2vw;
+    text-align: center;
+
+}
+.redes:hover{
+    color: #0909fdfa;
+}
+
+
+body {
+  background-color: rgb(179, 179, 179);
+   }
+
+
+
+
+h4{
+    color:white;
+    font-family: 'caveat';
+    font-size: 18px;
+
+}
+
+h2{
+    
+  color:black;
+  font-family:'Oswald';
+  padding: 12px; 
+  text-align:center;
+}
+
+h3{
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+
+}
+p{
+  color: black;
+  font-family: 'Open Sans';
+  font-size: 15px; 
+  text-align: justify;
+}
+
+
+/*--------------------formulario------------*/
+
+.form-register {
+  width: 600px;
+  background-color: #636372b0;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 4px;
+  font-family: Calibri;
+  color: white;   
+  box-shadow: 7px 13px 37px #000; 
+
+}
+
+.form-register .controls {
+  width: 40%;
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+  margin-bottom: 1px;
+  border: 2px solid #0909fdfa;
+  
+}
+
+.form-register .text1 {
+  height: 40px;
+  text-align: justify;
+  font-size: 14px;
+  font-family: Calibri;
+  
+}
+
+.form-register a {
+  color: #0909fdfa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-register .formu {
+  margin: auto;
+  font-family: Calibri;
+  color: white;   
+}
+
+.form-register .botons {
+  width: 30%;
+  background: linear-gradient(
+      90deg,
+      hwb(0 2% 7% / 0.98) 0%,
+      rgb(5, 0, 0) 77%);
+  box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 13px;
+
+}
+
+.form-register .botons:hover {
+  background: linear-gradient(
+      90deg,
+      rgb(5, 0, 0) 0%,
+      hwb(0 2% 7% / 0.98) 77%);
+  color: var(--bg-color);
+
+  
+}
+
+.form-register .botons1 {
+  width: 30%;
+  background: linear-gradient(
+      90deg,
+      hwb(0 2% 7% / 0.98) 0%,
+      rgb(5, 0, 0) 77%);
+  box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 13px;
+ 
+}
+
+.form-register .botons1:hover {
+  background: linear-gradient(
+      90deg,
+      rgb(5, 0, 0) 0%,
+      hwb(0 2% 7% / 0.98) 77%);
+  color: var(--bg-color);
+  
+}
+
+.form-register .comen {
+  width: 100%;
+
+}
+
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color:  white;
+  padding-top: 20px;
+  font-family: Calibri;
+
+}
+
+@media(max-width:991px) {
+  body {
+      padding: 30px;
+  }
+
+  .form-register {
+      padding: 50px 30px;
+      width: 100%;
+  }
+
+  input {
+      padding: 15px 10px;
+  }
+
+
+}
+
+nav {
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
