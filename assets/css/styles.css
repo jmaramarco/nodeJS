@@ -196,21 +196,23 @@ nav ul li {
 
 
   /*Estilos del Footer:*/
-  footer>div {
+  
+  footer > div {
     border: 2px red solid;
     min-height: 180px;
-    margin: 0.5rem;
+    margin-top: 5px ;
     height: auto;
     clear: left;
     background-color: var(--bg-color);
     text-align: center;
+    
 
 }
 
 .redes{
     color: var(--bg-input-color);
     margin: 0px 10px;
-    font-size: 30px;
+    font-size: 4vh;
     text-align: center;
 
 }
