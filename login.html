@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/65b8680a6e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/imgs/Logo1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Sofia+Sans:wght@400;500&family=Poppins:ital,wght@0,400;0,500;1,300&family=Caveat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Crossfit en Argentina</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2 id="loginTitle">Iniciar sesión</h2>
+        <form id="loginForm">
+            <div>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <span id="loginEmailError" class="error"></span>
+            </div>
+            <div>
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" required>
+                <span id="loginPasswordError" class="error"></span>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <button id="createAccountLink">Crear cuenta</button>
+
+        <div id="registrationFormContainer" style="display: none;">
+            <h2>Crear cuenta</h2>
+            <form id="registrationForm">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                    <span id="passwordError" class="error"></span>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirmar contraseña:</label>
+                    <input type="password" id="confirmPassword" required>
+                    <span id="confirmPasswordError" class="error"></span>
+                </div>
+                <button type="submit">Crear cuenta</button>
+            </form>
+        </div>
+    </div>
+    <script src="./assets/js/validate.js"></script>
+</body>
+</html>
