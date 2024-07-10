@@ -3,10 +3,7 @@
  * y es el que hará el tratamiento de la información.
  * En este archivo tenemos que codificar los métodos
  * .getAllEntrenamientos
- * .getBoxById
- * .createBox
- * .updateBox
- * .deleteBox
+ * .createEntrenamiento
  */
 
 //1- Importamos el módulo db.js
@@ -42,7 +39,6 @@ JOIN
     boxes b ON t.id_box = b.id_box;
 
     `;
-    
 
     //Eviamos la consulta a la bbdd
     db.query(sql, (err, result)=>{
@@ -53,11 +49,22 @@ JOIN
     });
 };
 
+    //2- createEntrenamiento
+const createEntrenamiento = (req, res)=>{
+    const { dias_entrena, compite, id_tipo_entrenamiento, id_profesor, id_atleta } = req.body;
+    const sql = `INSERT INTO entrenamientos (dias_entrena, compite, id_tipo_entrenamiento, id_profesor, id_atleta) VALUES (?, ?, ?, ?, ?)`
+
+    //Enviamos la consulta a la bbdd
+    db.query(sql,[dias_entrena, compite, id_tipo_entrenamiento, id_profesor, id_atleta], (err, result)=>{
+        //si sucede algun error
+        if(err){throw err}
+        //si todo sale bien
+        res.json({mensaje:"Entrenamiento Añadido"})
+    });
+};
 
 //7- Exportamos los módulos 
 module.exports = {
     getAllEntrenamientos,
-
+    createEntrenamiento
 }
-
-// 8 Pasamos a configurar db.js

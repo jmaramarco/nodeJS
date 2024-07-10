@@ -52,13 +52,13 @@ const getProfesorById = (req, res)=>{
 //4- createProfesor
 const createProfesor = (req, res)=>{
     // desestructuramos la req
-    const {nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, provincia, pais, tel} = req.body;
+    const {nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, tel} = req.body;
 
     // creamos la consulta
-    const sql = 'INSERT INTO profesores (nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, provincia, pais, tel) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO profesores (nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, tel) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     //Enviamos la consulta a la bbdd
-    db.query(sql,[nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, provincia, pais, tel],(err, result)=>{
+    db.query(sql,[nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, tel],(err, result)=>{
         //si sucede algun error
         if(err){throw err}
         //si todo sale bien
@@ -70,17 +70,17 @@ const createProfesor = (req, res)=>{
 const updateProfesor = (req, res) => {
     // Desestructuración de la consulta
     const { id_profesor } = req.params;
-    const { nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, provincia, pais, tel } = req.body;
+    const { nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, tel } = req.body;
 
     // Log the values for debugging
     console.log('ID Profesor:', id_profesor);
     console.log('Body:', req.body);
 
     // Creamos la consulta SQL
-    const sql = 'UPDATE profesores SET nombre = ?, apellido = ?, dni = ?, nacionalidad = ?, fec_nac = ?, calle = ?, nro_dom = ?, cod_postal = ?, localidad = ?, provincia = ?, pais = ?, tel = ? WHERE id_profesor = ?';
+    const sql = 'UPDATE profesores SET nombre = ?, apellido = ?, dni = ?, nacionalidad = ?, fec_nac = ?, calle = ?, nro_dom = ?, cod_postal = ?, localidad = ?, tel = ? WHERE id_profesor = ?';
 
     // Enviamos consulta a la bbdd
-    db.query(sql, [nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, provincia, pais, tel, id_profesor], (err, result) => {
+    db.query(sql, [nombre, apellido, dni, nacionalidad, fec_nac, calle, nro_dom, cod_postal, localidad, tel, id_profesor], (err, result) => {
         // Si sucede algún error
         if (err) {
             console.error("Error al actualizar el Profesor:", err);
