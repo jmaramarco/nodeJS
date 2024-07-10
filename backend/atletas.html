@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de Atletas</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Inscripción de Atletas</h2>
+        <form id="inscripcionForm">
+            <div class="form-group">
+                <label for="id_atleta">ID Atleta (para actualizar/eliminar):</label>
+                <input type="text" id="id_atleta" name="id_atleta">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="nacionalidad">Nacionalidad:</label>
+                <input type="text" id="nacionalidad" name="nacionalidad" required>
+            </div>
+            <div class="form-group">
+                <label for="fec_nac">Fecha de Nacimiento:</label>
+                <input type="date" id="fec_nac" name="fec_nac">
+            </div>
+                       
+            <div class="form-group">
+                <label for="peso">Peso:</label>
+                <input type="text" id="peso" name="peso">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Inscribir Atleta</button>
+                <button type="button" id="updateBtn">Actualizar Atleta</button>
+                <button type="button" class="delete" id="deleteBtn">Eliminar Atleta</button>
+                <button type="button" class="nav" id="prevBtn">Anterior</button>
+                <button type="button" class="nav" id="nextBtn">Siguiente</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

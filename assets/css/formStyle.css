@@ -146,15 +146,7 @@ nav ul li {
     background-color: var(--bg-input-color);
   }
 
-animación del botón*/
-
-
-.container{
-    display: flex;
-    justify-content: center; /*alineacion horizontal*/
-    align-items: center; /*alineacion vertical*/
-    height: 100vh;
-}
+/*animación del botón*/
 
 
 .btn{
@@ -260,106 +252,6 @@ p{
 }
 
 
-/*--------------------formulario------------*/
-
-.form-register {
-  width: 600px;
-  background-color: #636372b0;
-  padding: 30px;
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 4px;
-  font-family: Calibri;
-  color: white;
-  box-shadow: 7px 13px 37px #000;
-
-}
-
-.form-register .controls {
-  width: 40%;
-  background-color: white;
-  padding: 2px;
-  border-radius: 4px;
-  margin-bottom: 1px;
-  border: 2px solid #0909fdfa;
-
-}
-
-.form-register .text1 {
-  height: 40px;
-  text-align: justify;
-  font-size: 14px;
-  font-family: Calibri;
-
-}
-
-.form-register a {
-  color: #0909fdfa;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.form-register .formu {
-  margin: auto;
-  font-family: Calibri;
-  color: white;
-}
-
-.form-register .botons {
-  width: 30%;
-  background: linear-gradient(
-      90deg,
-      hwb(0 2% 7% / 0.98) 0%,
-      rgb(5, 0, 0) 77%);
-  box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
-  border-radius: 15px;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  margin: 10px 0;
-  font-size: 13px;
-
-}
-
-.form-register .botons:hover {
-  background: linear-gradient(
-      90deg,
-      rgb(5, 0, 0) 0%,
-      hwb(0 2% 7% / 0.98) 77%);
-  color: var(--bg-color);
-
-
-}
-
-.form-register .botons1 {
-  width: 30%;
-  background: linear-gradient(
-      90deg,
-      hwb(0 2% 7% / 0.98) 0%,
-      rgb(5, 0, 0) 77%);
-  box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
-  border-radius: 15px;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  margin: 10px 0;
-  font-size: 13px;
-
-}
-
-.form-register .botons1:hover {
-  background: linear-gradient(
-      90deg,
-      rgb(5, 0, 0) 0%,
-      hwb(0 2% 7% / 0.98) 77%);
-  color: var(--bg-color);
-
-}
-
-.form-register .comen {
-  width: 100%;
-
-}
 
 .warnings {
   width: 200px;
@@ -403,94 +295,88 @@ nav {
   }
 }
 
-/* Estilos para el pop-up */
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(179, 179, 179);
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.popup-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
+.hidden {
+    display:none;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.comentarios {
+    width: 100%;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.comentarios label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
-.popup-content h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--primary-color);
+.comen {
+    width: 100%;
+    height: 80px; /* Puedes ajustar la altura según tus necesidades */
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+}
+.checkbox {
+    margin-bottom: 10px;
 }
 
-.popup-content form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+textarea::placeholder {
+    color: #999;
 }
 
-.popup-content label {
-  width: 100%;
-  margin: 10px 0 5px;
-  font-size: 16px;
-  color: var(--bg-color);
+.form-group button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
 }
-
-.popup-content input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+.form-group button:hover {
+    background-color: #0056b3;
 }
-
-.popup-content button {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+.form-group button.delete {
+    background-color: #dc3545;
 }
-
-.popup-content button:hover {
-  background-color: var(--third-color);
-  color: var(--secondary-color);
-
-.error {
-  color: red;
-  font-size: 12px;
+.form-group button.delete:hover {
+    background-color: #c82333;
 }
+.form-group button.nav {
+    background-color: #6c757d;
+}
+.form-group button.nav:hover {
+    background-color: #5a6268;
 }

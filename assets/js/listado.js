@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach(item => {
             const row = entrenamientosTableBody.insertRow();
 
-            row.insertCell(0).textContent = item.nombre_atleta;
-            row.insertCell(1).textContent = item.nombre_profesor;
-            row.insertCell(2).textContent = item.nombre_entrenamiento;
+            row.insertCell(0).textContent = `${item.atleta_nombre} ${item.atleta_apellido}`;
+            row.insertCell(1).textContent = `${item.profesor_nombre} ${item.profesor_apellido}`;
+            row.insertCell(2).textContent = item.nom_entrenamiento;
             row.insertCell(3).textContent = item.nom_box;
             row.insertCell(4).textContent = item.dias_entrena;
             row.insertCell(5).textContent = item.compite ? 'Sí' : 'No';
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para filtrar los datos
     function filterData(query) {
         const filteredData = entrenamientos.filter(item => 
-            item.nombre_atleta.toLowerCase().includes(query) ||
-            item.nombre_profesor.toLowerCase().includes(query) ||
-            item.nombre_entrenamiento.toLowerCase().includes(query) ||
+            `${item.atleta_nombre} ${item.atleta_apellido}`.toLowerCase().includes(query) ||
+            `${item.profesor_nombre} ${item.profesor_apellido}`.toLowerCase().includes(query) ||
+            item.nom_entrenamiento.toLowerCase().includes(query) ||
             item.nom_box.toLowerCase().includes(query)
         );
         fillTable(filteredData);
